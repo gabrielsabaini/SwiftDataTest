@@ -8,10 +8,13 @@
 import SwiftUI
 import SwiftData
 
+//a View principal onde está sua lista de nomes salvos
 struct ContentView: View {
     
+    //o contexto sendo passado para o arquivo
     @Environment(\.modelContext) var modelContext
     
+    //A variável que busca os arquivos salvos no seu @Model
     @Query var destinations: [TestModel]
     
     @State var isOn: Bool = false
@@ -40,6 +43,7 @@ struct ContentView: View {
         }
     }
     
+    //função que passa para o contexto que um item foi deletado
     func deleteModel(_ indexSet: IndexSet) {
         for index in indexSet {
             let destination = destinations[index]

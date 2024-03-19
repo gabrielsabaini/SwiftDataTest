@@ -8,13 +8,15 @@
 import Foundation
 import SwiftData
 
+//Seria o antigo "Conteiner" do CoreData, onde você adiciona o que será salvo no seu app.
 @Model
 class TestModel {
     
-    //If you need iCloud, you need to put the value as optional or an Initializer here.
-    //Also all your relashionships need to be optional.
-    //And you cannot use @Attribute(.unique) in your project.
+    //Se você quiser conectar o iCloud é necessário colocar as variáveis como opcionais ou inicializa-las aqui
+    //Todas as relashionships precisam ser opcionais
+    //Não pode usar o @Attribute(.unique)
     var name: String = ""
+    
     
     init(name: String = "Gabriel") {
         self.name = name
